@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de remisión de casos clínicos de la Clínica Veterinaria Vethache.">
+
+  <title>Formulario de Remisión - Vethache</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <style>
+    /* =========================
+       ESTILO GENERAL
+    ========================== */
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7f6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* =========================
+       TARJETA FORMULARIO
+    ========================== */
+
+    .formulario-card {
+      max-width: 500px;
+      width: 100%;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      border-top: 6px solid #7B569E;
+    }
+
+    .formulario-card h1 {
+      color: #7B569E;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       CAMPOS
+    ========================== */
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 8px;
+      border: 2px solid #eee;
+      box-sizing: border-box;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #a0d3ef;
+      outline: none;
+      background-color: #f9feff;
+    }
+
+    input[type="file"] {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    /* =========================
+       BOTÓN
+    ========================== */
+
+    button {
+      margin-top: 25px;
+      padding: 15px;
+      width: 100%;
+      background: #7B569E;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 10px rgba(123, 86, 158, 0.2);
+    }
+
+    button:hover {
+      background: #62447e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(123, 86, 158, 0.3);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <main class="formulario-card">
+
+    <h1>
+      <i class="fas fa-file-medical" style="color:#a0d3ef;"></i>
+      Remisión de Caso
+    </h1>
+
+    <!-- IMPORTANTE: enctype para archivos -->
+    <form action="enviar.php" method="POST" enctype="multipart/form-data">
+
+      <label for="nombre">Nombre del cliente</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+
+      <label for="telefono">Teléfono de contacto</label>
+      <input type="text" id="telefono" name="telefono" placeholder="Ej: 600000000" inputmode="numeric" maxlength="9"
+        oninput="this.value=this.value.replace(/[^0-9]/g,'')" required>
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com">
+
+      <label for="mascota">Nombre de la mascota</label>
+      <input type="text" id="mascota" name="mascota" placeholder="Nombre del paciente" required>
+
+      <label for="motivo">Motivo e historia clínica</label>
+      <textarea id="motivo" name="motivo" rows="4" placeholder="Describa brevemente el caso..."></textarea>
+
+      <label for="archivos">Adjuntar documentos</label>
+      <input type="file" id="archivos" name="archivos[]" accept=".pdf,image/*" multiple>
+
+      <button type="submit">
+        Enviar Remisión
+      </button>
+
+    </form>
+
+  </main>
+
+</body>
+
+</html>

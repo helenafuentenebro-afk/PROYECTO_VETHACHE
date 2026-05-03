@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Servicios Especializados - Clínica Veterinaria Vethache</title>
+  <style>
+    /* Estilos específicos para la rejilla de 12 servicios */
+    .servicios-page-header {
+      padding: 150px 20px 60px;
+      text-align: center;
+      background-color: #f8f9fa;
+    }
+
+    .servicios-grid-full {
+      max-width: 1200px;
+      margin: 0 auto 100px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    /* Reutilizamos el estilo de tarjeta de index.html pero aseguramos su tamaño */
+    .tarjeta-servicio {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      border-bottom: 4px solid #7B569E;
+    }
+
+    .tarjeta-servicio:hover {
+      transform: translateY(-10px);
+    }
+
+    .tarjeta-servicio i {
+      font-size: 3rem;
+      color: #a0d3ef;
+      /* Azul de planes de salud */
+      margin-bottom: 20px;
+    }
+
+    .tarjeta-servicio h3 {
+      font-size: 1.2rem;
+      color: #7B569E;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .tarjeta-servicio p {
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar-vethache">
+    <div class="nav-container">
+      <div class="nav-izq">
+        <img src="img/logo..jpg" alt="Logo Vethache" class="logo-navbar">
+        <h1 class="nav-marca">CLINICA VETERINARIA VETHACHE</h1>
+      </div>
+      <div class="nav-derecha">
+        <nav class="menu-principal">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html" style="color: #7B569E; font-weight: bold;">Servicios</a></li>
+            <li><a href="index.html#equipo">Equipo</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="servicios-page-header">
+    <h1 style="color: #7B569E; font-size: 2.5rem; margin-bottom: 10px;">Nuestras Especialidades</h1>
+    <p style="color: #666; max-width: 700px; margin: 0 auto;">Ofrecemos medicina veterinaria de vanguardia con
+      especialistas dedicados a cada área de la salud de tu mascota.</p>
+  </section>
+
+  <main class="servicios-grid-full">
+
+    <div class="tarjeta-servicio">
+      <i class="fas fa-syringe"></i>
+      <h3>Anestesia y Analgesia</h3>
+      <p>Control del dolor y protocolos anestésicos personalizados para máxima seguridad.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <i class="fas fa-heartbeat"></i>
+      <h3>Cardiología</h3>
+      <p>Diagnóstico y tratamiento de patologías cardíacas con tecnología ecocardiográfica.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <i class="fas fa-hand-holding-medical"></i>
+      <h3>Cirugía de tejidos blandos</h3>
+      <p>Intervenciones quirúrgicas avanzadas con técnicas mínimamente invasivas para máxima seguridad.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <i class="fas fa-microscope"></i>
+      <h3>Dermatología</h3>
+      <p>Especialistas en problemas de piel, alergias y patologías óticas complejas.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <i class="fas fa-x-ray"></i>
+      <h3>Diagnóstico por imagen</h3>
+      <p>Radiología digital avanzada, ecografía y TAC para diagnósticos precisos.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <i class="fas fa-stethoscope"></i>
+      <h3>Medicina interna</h3>
+      <p>Abordaje integral de enfermedades complejas y crónicas de nuestros pacientes.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <i class="fas fa-brain"></i>
+      <h3>Neurología y neurocirugía</h3>
+      <p>Tratamiento de afecciones del sistema nervioso y columna vertebral.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <i class="fas fa-tooth"></i>
+      <h3>Odontología</h3>
+      <p>Limpieza avanzada, extracciones y cirugía maxilofacial veterinaria.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <i class="fas fa-eye"></i>
+      <h3>Oftalmología</h3>
+      <p>Cuidado avanzado de la visión, microcirugía ocular y tratamiento de cataratas.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <i class="fas fa-dna"></i>
+      <h3>Oncología</h3>
+      <p>Protocolos de quimioterapia y cirugía oncológica con enfoque multidisciplinar.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <i class="fas fa-bone"></i>
+      <h3>Rehabilitación y fisioterapia</h3>
+      <p>Recuperación postoperatoria y mejora de la movilidad en pacientes geriátricos.</p>
+    </div>
+
+    <div class="tarjeta-servicio">
+      <i class="fas fa-crutch"></i>
+      <h3>Traumatología y ortopedia</h3>
+      <p>Reparación de fracturas, roturas de ligamentos y displasias complejas.</p>
+    </div>
+
+  </main>
+
+  <footer class="footer-vethache">
+    <div class="footer-line-container">
+      <div class="footer-line-animated"></div>
+    </div>
+    <div class="footer-contenedor">
+      <div class="footer-bloque">
+        <h3 class="footer-marca">Clínica veterinaria Vethache</h3>
+        <p class="footer-copy">2026 © Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-bloque">
+        <h4 class="footer-titulo">Información legal</h4>
+        <ul class="footer-enlaces">
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+          <li><a href="politica-cookies.html">Política de Cookies</a></li>
+        </ul>
+      </div>
+      <div class="footer-bloque">
+        <h4 class="footer-titulo">Contacta</h4>
+        <p class="footer-info">Calle Arturo Soria, 245, 28033 Madrid<br><strong>(+34) 600 00 00
+            00</strong><br>info@vethache.com</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

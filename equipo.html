@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Nuestro Equipo - Clínica Veterinaria Vethache</title>
+  <style>
+    .equipo-page-header {
+      padding: 150px 20px 60px;
+      text-align: center;
+      background-color: #f8f9fa;
+    }
+
+    .equipo-grid {
+      max-width: 1200px;
+      margin: 0 auto 100px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    .tarjeta-vet {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .tarjeta-vet:hover {
+      transform: translateY(-10px);
+    }
+
+    .img-container-vet {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+    }
+
+    .img-container-vet img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .info-vet {
+      padding: 20px;
+    }
+
+    .info-vet h3 {
+      color: #7B569E;
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .info-vet p {
+      color: #a0d3ef;
+      /* Azul corporativo para la especialidad */
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar-vethache">
+    <div class="nav-container">
+      <div class="nav-izq">
+        <img src="img/logo..jpg" alt="Logo Vethache" class="logo-navbar">
+        <h1 class="nav-marca">CLINICA VETERINARIA VETHACHE</h1>
+      </div>
+      <div class="nav-derecha">
+        <nav class="menu-principal">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="equipo.html" style="color: #7B569E; font-weight: bold;">Equipo</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="equipo-page-header">
+    <h1 style="color: #7B569E; font-size: 2.5rem; margin-bottom: 10px;">Especialistas a tu disposición</h1>
+    <p style="color: #666; max-width: 600px; margin: 0 auto;">Un equipo multidisciplinar unido por la pasión y el
+      cuidado de los animales.</p>
+  </section>
+
+  <main class="equipo-grid">
+
+    <div class="tarjeta-vet">
+      <div class="img-container-vet">
+        <img src="img/vet1.jpg" alt="Veterinario 1">
+      </div>
+      <div class="info-vet">
+        <h3>Dr. Carlos Martínez</h3>
+        <p>Traumatología y Ortopedia</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-vet">
+      <div class="img-container-vet">
+        <img src="img/vet2.jpg" alt="Veterinario 2">
+      </div>
+      <div class="info-vet">
+        <h3>Dra. Lucía Fernández</h3>
+        <p>Cardiología y Medicina Interna</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-vet">
+      <div class="img-container-vet">
+        <img src="img/vet3.jpg" alt="Veterinario 3">
+      </div>
+      <div class="info-vet">
+        <h3>Dr. Javier Ruiz</h3>
+        <p>Neurología y Neurocirugía</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-vet">
+      <div class="img-container-vet">
+        <img src="img/vet4.jpg" alt="Veterinario 4">
+      </div>
+      <div class="info-vet">
+        <h3>Dra. Elena Gómez</h3>
+        <p>Oftalmología</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-vet">
+      <div class="img-container-vet">
+        <img src="img/vet5.jpg" alt="Veterinario 5">
+      </div>
+      <div class="info-vet">
+        <h3>Dr. Roberto Sanz</h3>
+        <p>Cirugía de Tejidos Blandos</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-vet">
+      <div class="img-container-vet">
+        <img src="img/vet6.jpg" alt="Veterinario 6">
+      </div>
+      <div class="info-vet">
+        <h3>Dra. Marta Castro</h3>
+        <p>Oncología y Diagnóstico por Imagen</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-vet">
+      <div class="img-container-vet">
+        <img src="img/vet7.jpg" alt="Veterinario 7">
+      </div>
+      <div class="info-vet">
+        <h3>Dr. Sergio Molina</h3>
+        <p>Anestesia y Analgesia</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-vet">
+      <div class="img-container-vet">
+        <img src="img/vet8.jpg" alt="Veterinario 8">
+      </div>
+      <div class="info-vet">
+        <h3>Dra. Ana Belén Ríos</h3>
+        <p>Dermatología y Odontología</p>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer-vethache">
+    <div class="footer-line-container">
+      <div class="footer-line-animated"></div>
+    </div>
+    <div class="footer-contenedor">
+      <div class="footer-bloque">
+        <h3 class="footer-marca">Clínica veterinaria Vethache</h3>
+        <p class="footer-copy">2026 © Todos los derechos reservados.</p>
+      </div>
+      <div class="footer-bloque">
+        <h4 class="footer-titulo">Información legal</h4>
+        <ul class="footer-enlaces">
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+          <li><a href="politica-cookies.html">Política de Cookies</a></li>
+        </ul>
+      </div>
+      <div class="footer-bloque">
+        <h4 class="footer-titulo">Contacta</h4>
+        <p class="footer-info">Calle Arturo Soria, 245, 28033 Madrid<br><strong>(+34) 600 00 00
+            00</strong><br>info@vethache.com</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

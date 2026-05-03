@@ -1,0 +1,12 @@
+Email de la clínica donde llegan los formularios: 
+
+Vethache@gmail.com
+Pass: Helena1992. 
+
+
+Email desde donde phpmailer envía los emails para que lleguen a vethache:
+
+remisionesvethache@gmail.com
+Pass: Helena1992.
+
+contraseña alternativa para usarlo en enviar.php: zuci fwry mqfk npvk

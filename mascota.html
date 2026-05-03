@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planes de Salud - Vethache</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Ajustes específicos para esta página */
+    body {
+      background-color: #f8f9fa;
+      padding-top: 110px; /* Espacio para que el header fixed no tape el título */
+    }
+
+    .contenedor-planes {
+      text-align: center;
+      max-width: 1100px; /* Un poco más ancho para las 3 tarjetas */
+      margin: 40px auto;
+      background: white;
+      padding: 60px 40px;
+      border-radius: 30px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+      border-top: 8px solid #7B569E;
+    }
+
+    h1#tituloPlan {
+      color: #7B569E;
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .subtitulo {
+      color: #666;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    .escena {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    /* Botones estilo cápsula Vethache */
+    .btn-plan {
+      padding: 15px 45px;
+      border: 2px solid #7B569E;
+      border-radius: 50px;
+      background: white;
+      color: #7B569E;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-plan:hover, .btn-plan.activo {
+      background: #7B569E;
+      color: white;
+      box-shadow: 0 5px 15px rgba(123, 86, 158, 0.3);
+    }
+
+    /* NUEVOS ESTILOS PARA TARJETAS DE PRECIOS */
+    .contenedor-precios {
+      display: none; /* Se activa por JS */
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+
+    .tarjeta-precio {
+      background: white;
+      border: 2px solid #7B569E;
+      border-radius: 20px;
+      padding: 30px;
+      width: 300px;
+      transition: transform 0.3s;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tarjeta-precio:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(123, 86, 158, 0.2);
+    }
+
+    .tarjeta-precio h3 { color: #7B569E; margin-bottom: 15px; text-transform: uppercase; }
+
+    .precio-monto {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #333;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .btn-comprar {
+      background-color: #7B569E;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn-comprar:hover {
+      background-color: #62447e;
+      transform: scale(1.05);
+    }
+
+    .volver-link {
+      display: inline-block;
+      margin-top: 30px;
+      color: #7B569E;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .volver-link:hover { opacity: 0.7; }
+
+    .corre { width: 80px; opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar-vethache">
+    <div class="nav-container">
+      <div class="nav-izq">
+        <img src="img/logo.png" alt="Logo Vethache" class="logo-navbar">
+        <span class="nav-marca">CLINICA VETHACHE</span>
+      </div>
+      <div class="nav-derecha">
+        <nav class="menu-principal">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="index.html#equipo">Equipo</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="botones-accion">
+          <a href="formulario.html" class="remisiones">Remitir caso</a>
+          <div class="nav-redes">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="contenedor-planes">
+    <h1 id="tituloPlan">Planes de Salud</h1>
+    <p class="subtitulo">Elige el mejor cuidado preventivo para tu mascota.</p>
+
+    <div class="escena">
+      <img src="img/perro.jpg" class="corre" alt="perro">
+      <div class="centro">
+        <button onclick="mostrarPlan('canino', this)" class="btn-plan">CANINO</button>
+        <button onclick="mostrarPlan('felino', this)" class="btn-plan">FELINO</button>
+      </div>
+      <img src="img/gato.png" class="corre" alt="gato">
+    </div>
+
+    <div id="seccionTarjetas" class="contenedor-precios">
+        <div class="tarjeta-precio">
+            <h3>BÁSICO</h3>
+            <span class="precio-monto" id="precioBasico">0€</span>
+            <ul style="list-style:none; padding:0; margin-bottom:20px; font-size:14px; color:#666; text-align:left;">
+                <li><i class="fas fa-check" style="color:#7B569E"></i> Certificado de salud anual</li>
+                <li><i class="fas fa-check" style="color:#7B569E"></i> Vacunas obligatorias</li>
+                <li><i class="fas fa-check" style="color:#7B569E"></i> Desparasitación interna</li>
+            </ul>
+            <a id="linkBasico" href="#" class="btn-comprar">Comprar Online</a>
+        </div>
+
+        <div class="tarjeta-precio">
+            <h3>STANDARD</h3>
+            <span class="precio-monto" id="precioStandard">0€</span>
+            <ul style="list-style:none; padding:0; margin-bottom:20px; font-size:14px; color:#666; text-align:left;">
+                <li><i class="fas fa-plus" style="color:#7B569E"></i> Todo lo del Básico</li>
+                <li><i class="fas fa-check" style="color:#7B569E"></i> Analítica de sangre</li>
+                <li><i class="fas fa-check" style="color:#7B569E"></i> Limpieza dental</li>
+            </ul>
+            <a id="linkStandard" href="#" class="btn-comprar">Comprar Online</a>
+        </div>
+
+        <div class="tarjeta-precio">
+            <h3>PREMIUM</h3>
+            <span class="precio-monto" id="precioPremium">0€</span>
+            <ul style="list-style:none; padding:0; margin-bottom:20px; font-size:14px; color:#666; text-align:left;">
+                <li><i class="fas fa-plus" style="color:#7B569E"></i> Todo lo del Standard</li>
+                <li><i class="fas fa-check" style="color:#7B569E"></i> Radiografías y ECOs</li>
+                <li><i class="fas fa-check" style="color:#7B569E"></i> Consultas urgentes</li>
+            </ul>
+            <a id="linkPremium" href="#" class="btn-comprar">Comprar Online</a>
+        </div>
+    </div>
+
+    <br>
+    <a href="index.html" class="volver-link"><i class="fas fa-arrow-left"></i> Volver a la web</a>
+  </div>
+
+   <footer class="footer-vethache">
+    <div class="footer-line-container">
+      <div class="footer-line-animated"></div>
+    </div>
+
+    <div class="footer-contenedor">
+      <div class="footer-bloque">
+        <h3 class="footer-marca">Clínica veterinaria Vethache</h3>
+        <p class="footer-copy">2026 © Todos los derechos reservados.</p>
+      </div>
+
+     <div class="footer-bloque">
+        <h4 class="footer-titulo">Información legal</h4>
+        <ul class="footer-enlaces">
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+          <li><a href="politica-cookies.html">Política de Cookies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bloque">
+        <h4 class="footer-titulo">Contacta</h4>
+        <p class="footer-info">Calle Arturo Soria, 245, 28033 Madrid</p>
+        <p class="footer-info">(+34) 600 00 00 00</p>
+        <p class="footer-info">info@vethache.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function mostrarPlan(tipo, elemento) {
+    const seccion = document.getElementById("seccionTarjetas");
+    seccion.style.display = "flex";
+    
+    // Quitamos la clase activo de todos los botones y se la damos al pulsado
+    document.querySelectorAll('.btn-plan').forEach(btn => btn.classList.remove('activo'));
+    elemento.classList.add('activo');
+
+    const datos = {
+        canino: { b: "195€", s: "325€", p: "445€" },
+        felino: { b: "180€", s: "298€", p: "408€" }
+    };
+
+    // Actualizamos precios
+    document.getElementById("precioBasico").textContent = datos[tipo].b;
+    document.getElementById("precioStandard").textContent = datos[tipo].s;
+    document.getElementById("precioPremium").textContent = datos[tipo].p;
+
+    // Actualizamos los enlaces para que el checkout sepa qué se está comprando
+    document.getElementById("linkBasico").href = `checkout.php?tipo=${tipo}&plan=basico`;
+    document.getElementById("linkStandard").href = `checkout.php?tipo=${tipo}&plan=standard`;
+    document.getElementById("linkPremium").href = `checkout.php?tipo=${tipo}&plan=premium`;
+}
+  </script>
+</body>
+</html>

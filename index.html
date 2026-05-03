@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Metadatos básicos del documento -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Librería de iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <title>Clínica Veterinaria Vethache</title>
+
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/es.js'></script>
+
+</head>
+
+<body>
+
+  <!-- ===================== -->
+  <!-- BARRA DE NAVEGACIÓN   -->
+  <!-- ===================== -->
+  <header class="navbar-vethache">
+    <div class="nav-container">
+
+      <!-- Marca y logotipo -->
+      <div class="nav-izq">
+  <img src="img/logo..jpg" alt="Logo Vethache" class="logo-navbar">
+  <h1 class="nav-marca"><span class="texto-marca">CLINICA VETERINARIA VETHACHE</span></h1>
+</div>
+
+      <!-- Menú principal y acciones -->
+      <div class="nav-derecha">
+
+        <!-- Navegación principal del sitio -->
+         <button class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        <nav class="menu-principal" id="nav-menu"> <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="equipo.html">Equipo</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
+
+        <!-- Botones destacados -->
+         
+        <div class="botones-accion">
+          <a href="formulario.html" class="remisiones" target="_blank">Remitir caso</a>
+
+          <!-- Menú desplegable de planes -->
+          <div class="planes-wrapper">
+            <button class="btn-planes" id="btnPlanes">PLANES DE SALUD</button>
+            <div class="planes-menu" id="menuPlanes">
+              <a href="mascota.html#canino" target="_blank">Canino</a>
+              <a href="mascota.html#felino" target="_blank">Felino</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="nav-redes">
+          <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== -->
+  <!-- HERO / PORTADA        -->
+  <!-- ===================== -->
+  <section class="fondo" id="portada">
+    <div class="hero-content">      
+        <a href="reserva.html" target="_blank" class="btn-reserva-portada">
+            RESERVAR CITA
+        </a>
+        
+        <div class="hero-content-buttons">
+            <a href="formulario.html" class="btn-portada remitir">Remitir</a>
+            <a href="#contacto" class="btn-portada contacto">Contacto</a>
+        </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== -->
+  <!-- SERVICIOS PRINCIPALES -->
+  <!-- ===================== -->
+  <section class="intro-servicios" id="servicios">
+    <span class="tag-servicios">Conoce nuestro trabajo</span>
+    <h2 class="titulo-servicios">Servicios Profesionales</h2>
+  </section>
+
+  <!-- Tarjetas con algunos servicios destacados -->
+  <section class="seccion-tarjetas">
+    <div class="contenedor-cards">
+
+      <div class="card">
+        <div class="card-img"><img src="img/consulta.png" alt="Medicina Interna"></div>
+        <div class="card-info">
+          <h3>Medicina Interna</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img"><img src="img/neurologia.png" alt="Neurología"></div>
+        <div class="card-info">
+          <h3>Neurología</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img"><img src="img/Cardiología.png" alt="Cardiología"></div>
+        <div class="card-info">
+          <h3>Cardiología</h3>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contenedor-boton">
+      <a href="servicios.html" class="btn-servicios">Más Servicios</a>
+    </div>
+  </section>
+
+
+  <!-- ===================== -->
+  <!-- EQUIPO PROFESIONAL    -->
+  <!-- ===================== -->
+  <section class="intro-equipo" id="equipo">
+    <span class="tag-equipo">Profesionales a tu disposición</span>
+    <h2 class="titulo-equipo">Conoce a nuestro equipo</h2>
+  </section>
+
+  <section class="seccion-equipo">
+    <div class="contenedor-cards">
+
+      <div class="card">
+        <div class="card-img"><img src="img/vet1.jpg" alt="Veterinario 1"></div>
+        <div class="card-info">
+          <h3>Alba García</h3>
+          <p>Veterinaria</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img"><img src="img/vet2.jpg" alt="Veterinario 2"></div>
+        <div class="card-info">
+          <h3>Roberto Machado</h3>
+          <p>Aux. Veterinario</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img"><img src="img/vet3.jpg" alt="Veterinario 3"></div>
+        <div class="card-info">
+          <h3>Sandra Prieto</h3>
+          <p>Neuróloga</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contenedor-boton">
+      <a href="equipo.html" class="btn-servicios">Conoce más</a>
+    </div>
+  </section>
+
+
+  <!-- ===================== -->
+  <!-- INSTALACIONES         -->
+  <!-- ===================== -->
+  <section class="intro-instalaciones" id="instalaciones">
+    <span class="tag-instalaciones">Nuestras salas</span>
+    <h2 class="titulo-instalaciones">Instalaciones de vanguardia</h2>
+  </section>
+
+  <!-- Galería de instalaciones -->
+  <section class="seccion-instalaciones">
+    <div class="contenedor-cards">
+
+      <div class="card">
+        <div class="card-img"><img src="img/consultas.jpg" alt="Sala de consultas"></div>
+        <div class="card-info">
+          <h3>Consultas</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img"><img src="img/hospitalizacion.jpg" alt="Zona de hospitalización"></div>
+        <div class="card-info">
+          <h3>Hospitalización</h3>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img"><img src="img/quirofano.jpg" alt="Quirófano veterinario"></div>
+        <div class="card-info">
+          <h3>Quirófano</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== -->
+  <!-- CONTACTO / FORMULARIO -->
+  <!-- ===================== -->
+  <section class="seccion-contacta" id="contacto">
+    <div class="contacta-contenedor">
+
+      <!-- Zona izquierda con logo -->
+      <div class="contacta-izq">
+        <div class="logo-contancta-box">
+          <img src="img/logo..jpg" alt="Logo Vethache" class="logo-contacta">
+        </div>
+        <p class="subtitulo-contacta">Estamos aquí para cuidarlos</p>
+      </div>
+
+      <!-- Zona derecha con formulario -->
+      <div class="contacta-derecha">
+        <span class="tag-servicios">Contacto Directo</span>
+        <h2 class="titulo-servicios">¿Necesitas asesoramiento?</h2>
+
+        <p class="texto-contacta">
+          Si tienes dudas sobre un caso o necesitas más información sobre nuestros
+          servicios y planes de salud, déjanos tu correo y nos pondremos en contacto
+          contigo lo antes posible.
+        </p>
+
+        <form class="formulario-contacta">
+          <input type="email" placeholder="Introduce tu Email..." class="input-email" required>
+          <button type="submit" class="btn-enviar">ENVIAR</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Script principal -->
+  <script src="js/script.js"></script>
+
+
+  <!-- ===================== -->
+  <!-- FOOTER                -->
+  <!-- ===================== -->
+  <footer class="footer-vethache">
+
+    <div class="footer-line-container">
+      <div class="footer-line-animated"></div>
+    </div>
+
+    <div class="footer-contenedor">
+
+      <!-- Información de la clínica -->
+      <div class="footer-bloque">
+        <h3 class="footer-marca">Clínica veterinaria Vethache</h3>
+        <p class="footer-copy">2026 © Todos los derechos reservados.</p>
+      </div>
+
+      <!-- Enlaces legales -->
+      <div class="footer-bloque">
+        <h4 class="footer-titulo">Información legal</h4>
+        <ul class="footer-enlaces">
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="politica-privacidad.html">Política de privacidad</a></li>
+          <li><a href="politica-cookies.html">Política de Cookies</a></li>
+        </ul>
+      </div>
+
+      <!-- Datos de contacto -->
+      <div class="footer-bloque">
+        <h4 class="footer-titulo">Contacta</h4>
+        <p class="footer-info">Calle Arturo Soria, 245, 28033 Madrid</p>
+        <p class="footer-info">(+34) 600 00 00 00</p>
+        <p class="footer-info">info@vethache.com</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ===================== -->
+  <!-- BANNER DE COOKIES     -->
+  <!-- ===================== -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-container">
+
+      <div class="cookie-texto">
+        <p>
+          Utilizamos cookies propias y de terceros para mejorar su experiencia y nuestros servicios.
+          Si continúa navegando, consideramos que acepta su uso. Puede obtener más información en nuestra
+          <a href="politica-cookies.html">Política de Cookies</a>.
+        </p>
+      </div>
+
+      <div class="cookie-botones">
+        <button id="btn-aceptar-cookies" class="btn-cookie-aceptar">ACEPTAR</button>
+        <button id="btn-config-cookies" class="btn-cookie-config">Configurar</button>
+      </div>
+
+    </div>
+
+    <!-- Panel de configuración de cookies -->
+    <div id="cookie-config-panel" class="cookie-config-panel" style="display: none;">
+      <h4>Configuración de cookies</h4>
+      <label><input type="checkbox" checked disabled> Técnicas (Obligatorias)</label>
+      <label><input type="checkbox"> Analíticas</label>
+      <label><input type="checkbox"> Publicidad</label>
+
+      <button id="btn-guardar-cookies" class="btn-cookie-aceptar" style="margin-top: 10px; width: 100%;">
+        Guardar selección
+      </button>
+    </div>
+  </div>
+
+
+  <script>
+    // Cookie banner controls
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const panel = document.getElementById("cookie-config-panel");
+      const btnAceptar = document.getElementById("btn-aceptar-cookies");
+      const btnConfig = document.getElementById("btn-config-cookies");
+      const btnGuardar = document.getElementById("btn-guardar-cookies");
+
+      function cerrarBanner() {
+        banner.style.display = "none";
+      }
+
+      btnAceptar.addEventListener("click", cerrarBanner);
+      btnGuardar.addEventListener("click", cerrarBanner);
+
+      btnConfig.addEventListener("click", function () {
+        if (panel.style.display === "none") {
+          panel.style.display = "block";
+        } else {
+          panel.style.display = "none";
+        }
+      });
+    });
+  </script>
+
+  <div id="boton-chat" onclick="toggleChat()">
+    <i class="fas fa-comments"></i>
+  </div>
+
+  <div id="ventana-chat" style="display: none;">
+    <div id="cabecera-chat">
+      <span>Asistente Vethache 🐾</span>
+      <button onclick="toggleChat()">X</button>
+    </div>
+    <div id="cuerpo-chat">
+    </div>
+  </div>
+
+  <script src="js/chat.js"></script>
+  <script>
+  const btn = document.getElementById('mobile-menu');
+const menu = document.getElementById('nav-menu');
+
+btn.onclick = function() {
+    // 1. Desplegar/Esconder el menú
+    menu.classList.toggle('active');
+    
+    // 2. Cambiar icono (Rayas <-> X)
+    const icono = btn.querySelector('i');
+    icono.classList.toggle('fa-bars');
+    icono.classList.toggle('fa-times');
+};
+</script>
+
+</body>
+
+</html>

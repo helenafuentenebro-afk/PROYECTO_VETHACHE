@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vethache Connect - Reserva de Citas</title>
+    
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/style.css">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/es.js'></script>
+    
+    <style>
+        body { background-color: #f4f7f6; padding: 20px; font-family: sans-serif; }
+        .container-reserva { max-width: 1100px; margin: 0 auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .header-reserva { text-align: center; margin-bottom: 30px; }
+        .logo-reserva { height: 80px; margin-bottom: 10px; }
+        #calendar { background: white; }
+        
+        /* Estilos Personalizados FullCalendar */
+        .fc-toolbar-title { color: #7B569E !important; }
+        .fc-button-primary { background-color: #44b0d8 !important; border: none !important; }
+
+        /* Quitar flechas en Chrome, Safari, Edge y Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Quitar flechas en Firefox */
+        input[type="number"] {
+            appearance: textfield;
+            -moz-appearance: textfield;
+        }
+
+        /* Estilo para el Modal */
+        #modalCita {
+            display:none; 
+            position:fixed; 
+            top:50%; 
+            left:50%; 
+            transform:translate(-50%, -50%); 
+            background:white; 
+            padding:25px; 
+            border-radius:15px; 
+            box-shadow:0 0 30px rgba(0,0,0,0.3); 
+            z-index:10001; 
+            width: 95%; 
+            max-width: 500px; 
+            max-height: 85vh; 
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-reserva">
+        <div class="header-reserva">
+            <img src="img/logo..jpg" alt="Logo" class="logo-reserva">
+            <h1 style="color: #7B569E;">Reserva tu Cita Online</h1>
+            <p>Horario Medicina Interna: Lunes a Viernes (09:00 - 21:00)</p>
+            <p>Fuera de este horario puede encontrarnos en horario de URGENCIAS.</p>
+            <p style="color: red; font-weight: bold;"> Para cualquier otra especialidad deberá ser derivado por Medicina Interna.</p>
+        </div>
+
+        <div id='calendar'></div>
+    </div>
+
+    <div id="modalCita">
+        <h3 id="fechaTexto" style="color:#7B569E; margin-bottom: 15px; text-align: center;"></h3>
+        
+        <div style="display: grid; gap: 10px;">
+            <input type="text" id="nombreCita" placeholder="Nombre y Apellidos *" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
+            
+            <input type="number" id="telCita" placeholder="Teléfono*" required oninput="if(this.value.length > 9) this.value = this.value.slice(0, 9);" style="padding:10px; border-radius:5px; border:1px solid #ccc;">    
+            
+            <input type="email" id="emailCita" placeholder="Email (Opcional)" style="padding:10px; border-radius:5px; border:1px solid #ccc;">
+            
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;">
+            
+            <input type="text" id="mascotaCita" placeholder="Nombre de la Mascota *" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
+            
+            <select id="especieCita" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
+                <option value="" disabled selected>Especie mascota *</option>
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+            </select>
+            
+            <input type="number" id="edadCita" placeholder="Edad mascota *" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
+            
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 10px 0;">
+            
+            <div style="padding:10px; background:#f9f9f9; border-radius:5px; border:1px solid #ccc; color:#555;">
+                <strong>Especialidad:</strong> Medicina Interna
+                <input type="hidden" id="selectEspecialista" value="Medicina Interna">
+            </div>
+            
+            <textarea id="motivoCita" placeholder="Motivo de la cita *" required style="padding:10px; border-radius:5px; border:1px solid #ccc; height: 60px;"></textarea>
+        </div>
+
+        <div style="margin-top: 20px; display: flex; gap: 10px; padding-bottom: 10px;">
+            <button onclick="guardarCita()" style="background:#7B569E; color:white; border:none; padding:12px; flex:2; border-radius:8px; cursor:pointer; font-weight:bold;">
+                Reservar ahora
+            </button>
+            <button type="button" onclick="cerrarModal()" style="background:#eee; color: #333; border:none; padding:12px; flex:1; border-radius:8px; cursor:pointer;">
+                Cancelar
+            </button>
+        </div>
+    </div>
+
+    <script src="js/calendar.js"></script>
+</body>
+</html>
